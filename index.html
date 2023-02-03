@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css剪裁GIF背景图片动画特效|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" /><!--CSS RESET-->
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
+	<link href="https://fonts.googleapis.com/css?family=Lato:900|Rye&display=swap" rel="stylesheet">
+	<style>
+		.wrapper{
+		  background: #252854;
+		  width: 100%;
+		  height:500px;
+		  border-radius: 5px;
+		  position: relative;  
+		}
+		.text{
+		  flex: 0 0 100%;
+		  font-size: 14rem;
+		  font-weight: 900;
+		  color: #00000000;
+		  text-align: center;
+		  font-family: 'Lato', sans-serif;
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  transform: translate(-50%, -50%);
+		  border-bottom: 1px solid #d4d7ff;
+		  border-top: 1px solid #d4d7ff;
+		  background: url(./img/source.gif);
+		  background-clip: text;
+		  -webkit-background-clip: text;
+		}
+		  
+		 .text:after{
+		   content: attr(data-text);
+		   -webkit-text-stroke: 1.5px #d4d7ff;
+		   position: absolute;
+		   left: 50%;
+		   top: 50%;
+		   transform: translate(-50%, -49%);
+		   background: url(./img/source.gif);
+		   background-clip: text;
+		   -webkit-background-clip: text;
+		   background-size: 43%;
+
+		}
+			.demo1{ background: #222; }
+		.text-effect1{
+		    color: #ffff00;
+		    font-family: 'Cabin Sketch', cursive;
+		    font-size: 100px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    margin: 0 auto;
+		    position: relative;
+		}
+		.text-effect1 span{
+		    display: inline-block;
+		    animation: animate 0.5s linear infinite both;
+		}
+		.text-effect1 span:nth-child(1),
+		.text-effect1 span:nth-child(4),
+		.text-effect1 span:nth-child(7),
+		.text-effect1 span:nth-child(10){
+		   color: #4cd137;
+		}
+		.text-effect1 span:nth-child(2),
+		.text-effect1 span:nth-child(5),
+		.text-effect1 span:nth-child(8){
+		   color: #ff0000;
+		}
+		@keyframes animate1{
+		    0%, 50%, 100%{ transform: rotate(0deg) scale(1); }
+		    25%{ transform: rotate(4deg) scale(0.98); }
+		    75%{ transform: rotate(-4deg) scale(1.02); }
+		}
+		@media only screen and (max-width: 990px){
+		    .text-effect{ font-size: 100px; }
+		}
+		@media only screen and (max-width: 767px){
+		    .text-effect{ font-size: 80px; }
+		}
+		@media only screen and (max-width: 479px){
+		    .text-effect{ font-size: 60px; }
+		}
+		@media only screen and (max-width: 359px){
+		    .text-effect{ font-size: 45px; }
+		}
+
+
+
+
+.text-effect2{
+    color: #fff;
+    font-family: 'Monoton', cursive;
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+.text-effect2 span{ animation: animate2 linear 2000ms infinite; }
+.text-effect2 span:nth-child(1n){ animation-delay: 0s; }
+.text-effect2 span:nth-child(2n){ animation-delay: 100ms; }
+.text-effect2 span:nth-child(3n){ animation-delay: 200ms; }
+.text-effect2 span:nth-child(4n){ animation-delay: 300ms; }
+.text-effect2 span:nth-child(5n){ animation-delay: 400ms; }
+.text-effect2 span:nth-child(6n){ animation-delay: 500ms; }
+.text-effect2 span:nth-child(7n){ animation-delay: 600ms; }
+.text-effect2 span:nth-child(8n){ animation-delay: 700ms; }
+.text-effect2 span:nth-child(9n){ animation-delay: 800ms; }
+.text-effect2 span:nth-child(10n){ animation-delay: 900ms; }
+@keyframes animate2{
+    0%{ opacity: 0.3; }
+    100%{
+       opacity:1;
+       text-shadow: 0 0 80px Red,0 0 30px orange,0 0 6px DarkRed;
+    }
+}
+
+
+.text-effect3{
+    color: #fff;
+    font-family: 'Frijole', cursive;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 8px;
+    margin: 30px auto 0;
+    animation3: 4s animate infinite linear;
+}
+@keyframes animate3{
+    0%{ text-shadow: 0 0 0 white; }
+    40%{
+        color: rgba(255,255,255,0);
+        text-shadow: 0 0 30px white;
+    }
+    70%{
+        color: rgba(255,255,255,0.4);
+        text-shadow: 0 0 10px white;
+    }
+    90%{
+        color: rgba(255,255,255,0.6);
+        text-shadow: 0 0 30px white;
+    }
+    100%{ text-shadow: 0 0 40px rgba(255,255,255,0); }
+}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="htmleaf-container">
+
+		<div class= "wrapper">
+		  <div class= "text" data-text= "磊">磊</div>
+		<div>
+			<div class="demo" style="min-height:500px;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="text-effect1">
+								<span>磊</span><span>磊</span><span>磊</span><span>磊</span>
+							</div>
+							<div class="text-effect2">
+								<span>磊</span><span>磊</span><span>磊</span><span>磊</span>
+								<span>磊</span><span>磊</span><span>磊</span><span>磊</span>
+							</div>
+
+						</div>
+						<div class="col-md-12">
+							<div class="text-effect1">
+								<span>磊</span><span>磊</span><span>磊</span><span>磊</span>
+							</div>
+							<div class="text-effect2">
+								<span>磊</span><span>磊</span><span>磊</span><span>磊</span>
+								<span>磊</span><span>磊</span><span>磊</span><span>磊</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</body>
+</html>
