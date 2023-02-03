@@ -154,11 +154,82 @@
 		}
 
 
+.loukong{
+/* 设置文字为透明，设置文本描边*/
+background-color: #00c4ff;
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke:1px #000;
+}
 
+.d2{
+color: white;
+text-shadow:
+0px 0px 20px yellow,
+0px 0px 10px orange,
+0px 0px 10px orangered,
+0px 0px 10px red;
+}
+
+
+.d1{
+color: #fff;
+text-shadow:  0px 0px 10px black;
+}
+
+.d3{
+color: #fff;
+text-shadow: 1px 1px 0px yellow,
+2px 2px 2px orange,
+3px 3px 2px orangered,
+5px 5px 2px red;
+}
+
+
+.d4
+{
+         margin:0px;
+         padding:0px;
+         color:#6B6854;
+         font:14px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.d5
+{
+
+        padding:0; font-family:arial, sans-serif; font-size:12px;
+        margin:0px auto auto auto;
+        color:#36322b;
+}
+.d6 {
+
+        font-family:Arial,Helvetica,sans-serif;font-size:100%;
+        line-height:1em;color:#4e4e4e;
+        min-width:920px;
+
+      }
+
+.huanse{
+    /* 两层背景，没啥技巧 */
+    color: white;
+    text-shadow: 1px 1px 0px #0000FF,2px 2px 0px #0000FF,-1px -1px 0px #E31B4E,-2px -2px 0px #E31B4E;
+}
+
+.chongdie{
+    /* 两层背景，一层与被背景色相同，一层与文字色相同 */
+    color: #eee;
+    text-shadow: 5px 5px 0 #666, 7px 7px 0 #eee;
+}
+
+.nihong{
+    /* 深色底色，浅色文字，多层浅色文字阴影，弥散大 */
+
+    color: white;
+    text-shadow: 0px 0px 15px #00FFFF,0px 0px 15px #00FFFF,0px 0px 15px #00FFFF;
+}
 
 	</style>
 </head>
-<body>
+<body onresize=hero();>
 	<div class="htmleaf-container">
 
 		<div class= "wrapper">
@@ -169,7 +240,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="text-effect1">
-								<span>磊</span><span>磊</span><span>磊</span><span>磊</span>
+								<span class="chongdie">磊</span><span>磊</span><span>磊</span><span class="d2">磊</span>
 							</div>
 							<div class="text-effect2">
 								<span>磊</span><span>&nbsp;&nbsp;</span><span>&nbsp;&nbsp;</span><span>磊</span>
@@ -181,16 +252,28 @@
 						<div class="col-md-12">
 
 							<div class="text-effect1">
-								<span>磊</span><span>磊</span><span>磊</span><span>磊</span>
+								<span class="nihong">磊</span><span class="chongdie">磊</span><span >磊</span><span>磊</span>
 
 							</div>
 							<div class="text-effect3">
-								<span>Best Wishes!</span>
+								<span>HAPPY</span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 	</div>
+			<script language=javascript>
+
+function hero()
+{
+var herowidth=400;//改为你要的网页宽度
+var heroheight=300;//改为你要的网页高度
+window.resizeTo(herowidth,heroheight);
+}
+hero();
+</script>
+
 </body>
+
 </html>
